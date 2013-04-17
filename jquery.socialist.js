@@ -538,21 +538,21 @@
             timeAgo:function(date_str){
                 date_str = date_str.replace('+0000','Z');
                 var time_formats = [
-                    [60, 'just now', 1],
-                    [120, '1 minute ago', '1 minute from now'],
-                    [3600, 'minutes', 60], 
-                    [7200, '1 hour ago', '1 hour from now'],
-                    [86400, 'hours', 3600], 
-                    [172800, 'yesterday', 'tomorrow'], 
-                    [604800, 'days', 86400], 
-                    [1209600, 'last week', 'next week'], 
-                    [2419200, 'weeks', 604800], 
-                    [4838400, 'last month', 'next month'], 
-                    [29030400, 'months', 2419200], 
-                    [58060800, 'last year', 'next year'], 
-                    [2903040000, 'years', 29030400], 
-                    [5806080000, 'last century', 'next century'], 
-                    [58060800000, 'centuries', 2903040000] 
+                    [60, 'à l\'instant', 1],
+                    [120, 'il y a une minute', '1 minute from now'],
+                    [3600, 'il y a quelques minutes', 60], 
+                    [7200, 'il y a une heure', 'dans une heure'],
+                    [86400, 'il y a quelques heures', 3600], 
+                    [172800, 'hier', 'demain'], 
+                    [604800, 'il y a quelques jours', 86400], 
+                    [1209600, 'la semaine dernière', 'la semaine prochaine'], 
+                    [2419200, 'il y a quelques semaines', 604800], 
+                    [4838400, 'le mois dernier', 'next month'], 
+                    [29030400, 'il y a quelques mois', 2419200], 
+                    [58060800, 'l\'an dernier', 'l\'an prochain'], 
+                    [2903040000, 'il y a des années', 29030400], 
+                    [5806080000, 'le sciècle dernier', 'next century'], 
+                    [58060800000, 'il y a quelques sciècles', 2903040000] 
                 ];
                 var time = ('' + date_str).replace(/-/g,"/").replace(/[TZ]/g," ").replace(/^\s\s*/, '').replace(/\s\s*$/, '');
                 if(time.substr(time.length-4,1)==".") time =time.substr(0,time.length-4);
